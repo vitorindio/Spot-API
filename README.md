@@ -11,7 +11,7 @@
    ```
    PORT=3333
    HOST=0.0.0.0
-   NODE_ENV=production
+   NODE_ENV=development
    APP_KEY=v4oVfVERD_Z7TS41IfpEaE-ecD9OGB2S
    DRIVE_DISK=local
    SESSION_DRIVER=cookie
