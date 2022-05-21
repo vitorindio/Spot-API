@@ -1,5 +1,5 @@
 import type { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
-import StoreValidator from 'App/Validators/Auth/StoreValidator'
+import { StoreValidator } from 'App/Validators/Auth'
 
 export default class AuthController {
   public async store({ request, auth }: HttpContextContract) {
@@ -11,6 +11,6 @@ export default class AuthController {
   }
 
   public async destroy({ auth }: HttpContextContract) {
-    await auth.logout
+    await auth.logout()
   }
 }
