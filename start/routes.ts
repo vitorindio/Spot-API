@@ -20,6 +20,6 @@
 
 import Route from '@ioc:Adonis/Core/Route'
 
-Route.get('/', async () => {
-  return { server: 'up' }
+Route.get('/', async ({ view }) => {
+  return view.render('index')
 })
