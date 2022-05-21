@@ -9,7 +9,7 @@
     "Contracts": "contracts"
   },
   "preloads": ["./start/routes", "./start/kernel"],
-  "providers": ["./providers/AppProvider", "@adonisjs/core", "@adonisjs/lucid", "@adonisjs/view"],
+  "providers": ["./providers/AppProvider", "@adonisjs/core", "@adonisjs/lucid", "@adonisjs/view", "@adonisjs/auth"],
   "aceProviders": ["@adonisjs/repl"],
   "tests": {
     "suites": [
