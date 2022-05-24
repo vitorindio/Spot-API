@@ -24,3 +24,10 @@ import './auth'
 Route.get('/', async ({ view }) => {
   return view.render('index')
 })
+
+Route.get('/test', async ({ response }) => {
+  return response.json({
+    status: 200,
+    time: new Date().toISOString()
+  })
+})
