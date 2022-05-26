@@ -1,6 +1,6 @@
 import Hash from '@ioc:Adonis/Core/Hash'
 import { BaseModel, beforeSave, column, HasMany, hasMany } from '@ioc:Adonis/Lucid/Orm'
-import { UserKey } from 'App/Models'
+import { Records, UserKey } from 'App/Models'
 import { DateTime } from 'luxon'
 
 export default class User extends BaseModel {
@@ -43,4 +43,7 @@ export default class User extends BaseModel {
 
   @hasMany(() => UserKey)
   public keys: HasMany<typeof UserKey>
+
+  @hasMany(() => Records)
+  public records: HasMany<typeof Records>
 }

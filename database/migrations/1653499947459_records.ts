@@ -12,6 +12,8 @@ export default class Records extends BaseSchema {
       table.string('project').notNullable
       table.string('notes', 4000).nullable()
       table.boolean('payed').defaultTo(false).nullable()
+      table.timestamp('created_at', { useTz: true }).notNullable()
+      table.timestamp('updated_at', { useTz: true }).notNullable()
     })
   }
 
