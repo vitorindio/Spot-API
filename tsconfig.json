@@ -19,7 +19,8 @@
       "@japa/preset-adonis/build/adonis-typings",
       "@adonisjs/lucid",
       "@adonisjs/view",
-      "@adonisjs/auth"
+      "@adonisjs/auth",
+      "@adonisjs/mail"
     ]
   }
 }
