@@ -31,3 +31,7 @@ Route.get('/test', async ({ response }) => {
     time: new Date().toISOString()
   })
 })
+
+Route.get('/register', async ({ view }) => {
+  return view.render('emails/register')
+})
