@@ -16,8 +16,6 @@ export default class ForgotPasswordsController {
 
     const link = `${redirectUrl.replace(/\/$/, '')}/${key}`
 
-    console.log({ link })
-
     await Mail.send((message) => {
       message.to(email)
       message.from('spot.owse@aol.com', 'OWSE | SPOT')
