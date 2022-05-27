@@ -27,7 +27,7 @@ export default class RegistersController {
 
       await Mail.send((message) => {
         message.to(email)
-        message.from('spot.owse@aol.com', 'spot.owse')
+        message.from('spot.owse@aol.com', 'OWSE – SPOT')
         message.subject('Ativação de conta')
         message.htmlView('emails/register', { link })
       })

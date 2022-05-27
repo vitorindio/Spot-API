@@ -20,7 +20,7 @@ export default class ForgotPasswordsController {
 
     await Mail.send((message) => {
       message.to(email)
-      message.from('spot.owse@aol.com', 'OWSE | SPOT')
+      message.from('spot.owse@aol.com', 'OWSE – SPOT')
       message.subject('Redefinição de Senha')
       message.htmlView('emails/forgot-password', { link })
     })
