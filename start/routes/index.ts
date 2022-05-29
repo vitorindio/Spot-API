@@ -26,13 +26,13 @@ Route.get('/', async ({ view }) => {
   return view.render('index')
 })
 
-Route.get('/test', async ({ response }) => {
+Route.get('/status', async ({ response }) => {
   return response.json({
     status: 200,
     time: new Date().toISOString()
   })
 })
 
-Route.get('/register', async ({ view }) => {
+Route.get('/register-template', async ({ view }) => {
   return view.render('emails/register')
 })
