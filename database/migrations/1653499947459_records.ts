@@ -1,4 +1,5 @@
 import BaseSchema from '@ioc:Adonis/Lucid/Schema'
+import { companies } from 'App/Utils'
 
 export default class Records extends BaseSchema {
   protected tableName = 'records'
@@ -9,6 +10,7 @@ export default class Records extends BaseSchema {
       table.integer('user_id').unsigned().references('id').inTable('users').onUpdate('CASCADE')
       table.timestamp('start_time').notNullable()
       table.timestamp('end_time').notNullable()
+      table.enu('company', companies).notNullable().defaultTo(companies[0])
       table.string('project').notNullable
       table.string('notes', 4000).nullable()
       table.boolean('payed').defaultTo(false).nullable()
