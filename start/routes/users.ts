@@ -1,7 +1,7 @@
 import Route from '@ioc:Adonis/Core/Route'
 
 // TODO: Adicionar middleware: apenas administrador pode registrar usuários
-Route.post('/admin/register', 'Users/Register.store')
+Route.post('/admin/register', 'Users/Register.store').middleware('auth')
 Route.get('/admin/register/:key', 'Users/Register.show')
 Route.put('/admin/register', 'Users/Register.update')
 
