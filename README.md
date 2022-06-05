@@ -7,15 +7,16 @@
    npm install
    ```
 
-1. Crie um arquivo `.env` com as seguintes variáveis:
+1. Utilize o arquivo [`.env.example`](/.env.example) para criar seu próprio [`.env`](/.env) e defina as variáveis de **MYSQL** e de **SMTP**.
+
+1. Crie o banco de dados e as tabelas:
+   ```sh
+   node ace migration:run
    ```
-   PORT=3333
-   HOST=0.0.0.0
-   NODE_ENV=development
-   APP_KEY=v4oVfVERD_Z7TS41IfpEaE-ecD9OGB2S
-   DRIVE_DISK=local
-   SESSION_DRIVER=cookie
-   CACHE_VIEWS=false
+
+1. Insira os dois primeiros usuários:
+   ```sh
+   node ace db:seed
    ```
 
 1. Execute o projeto:
