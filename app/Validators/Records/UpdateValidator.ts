@@ -6,6 +6,7 @@ export default class StoreValidator {
   constructor(protected ctx: HttpContextContract) {}
 
   public schema = schema.create({
+    recordId: schema.number(),
     startTime: schema.date(),
     endTime: schema.date(),
     company: schema.enum(companies),
