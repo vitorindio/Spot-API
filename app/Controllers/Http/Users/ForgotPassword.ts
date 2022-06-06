@@ -27,7 +27,11 @@ export default class ForgotPasswordsController {
   }
 
   public async show({ params }: HttpContextContract) {
-    await UserKey.findByOrFail('key', params.key)
+    const userKey = await UserKey.findByOrFail('key', params.key)
+
+    await userKey.load('user')
+
+    return userKey.user.email
   }
 
   public async update({ request }: HttpContextContract) {
